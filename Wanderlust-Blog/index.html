@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wanderlust</title>
+    <link href="style.css" rel="stylesheet" />
+    <!-- bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    
+    <!--font awesome-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg py-4">
+      <div class="container-fluid">
+        <img src="images/logo.png" alt="logo" class="logo" style="width: 24px; height: auto; padding-left: 2px; padding-right: 4px;">
+
+        <a class="navbar-brand text-white fw-bold" href="index.html" 
+          >Wanderlust</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarText"
+          aria-controls="navbarText"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse text-white" id="navbarText">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link active text-white"
+                aria-current="page"
+                href="index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="topics.html">Topics</a>
+            </li>
+            <li class="nav-item">
+        <a class="nav-link text-white" href="writers.html">Writers</a>
+            </li>
+
+            
+            <li class="nav-item">
+              <a class="nav-link text-white" href="contact.html">Contact us</a>
+            </li>
+          </ul>
+          <span class="navbar-text">
+            <div class="div-svg">
+              <a
+                class="btn btn-primary me-2 "
+                href="login.html"
+                data-bs-toggle="modal"
+                data-bs-target="#Loginmodel"
+              >
+                <span class="div-svg-btn">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                    <!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                    <path
+                      d="M304 128a80 80 0 1 0 -160 0 80 80 0 1 0 160 0zM96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM49.3 464H398.7c-8.9-63.3-63.3-112-129-112H178.3c-65.7 0-120.1 48.7-129 112zM0 482.3C0 383.8 79.8 304 178.3 304h91.4C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7H29.7C13.3 512 0 498.7 0 482.3z"
+                    />
+                  </svg>
+                  Login</span
+                ></a
+              >
+
+              <a class="btn btn-primary " href="signup.html"
+                ><span class="div-svg-btn"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 640 512"
+                  >
+                    <!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                    <path
+                      d="M96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM0 482.3C0 383.8 79.8 304 178.3 304h91.4C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7H29.7C13.3 512 0 498.7 0 482.3zM504 312V248H440c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V136c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H552v64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"
+                    />
+                  </svg>
+                  Sign Up</span
+                ></a
+              >
+            </div>
+          </span>
+        </div>
+      </div>
+    </nav>
+    <!--Login Model-->
+    <div
+      class="modal fade"
+      id="Loginmodel"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="container py-2">
+              <div class="row d-flex justify-content-center align-items-center">
+                <div class="col">
+                  <div class="card text-black">
+                    <div class="g-0">
+                      <div class="">
+                        <div class="card-body py-3 mx-md-4">
+                          <button
+                            type="button"
+                            class="btn-close float-right"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                          ></button>
+
+                          <div class="text-center mt-3">
+                            <img
+                              src="logo.png"
+                              style="width: 300px"
+                              class="mb-5"
+                              alt="logo"
+                            />
+                          </div>
+
+                          <form class="ms-auto me-auto justify-content-center">
+                            <div class="form-outline mb-2">
+                              <label class="form-label">Username</label>
+
+                              <input
+                                type="email"
+                                class="form-control"
+                                style="max-width: 100% !important"
+                                placeholder="Username or Email"
+                              />
+                            </div>
+
+                            <div class="form-outline mb-2">
+                              <label class="form-label">Password</label>
+
+                              <input
+                                type="password"
+                                class="form-control w-100"
+                                style="max-width: 100% !important"
+                                placeholder="Password"
+                              />
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value=""
+                                id=""
+                                checked
+                              />
+                              <label class="form-check-label" for="">
+                                Remember me
+                              </label>
+                              <a class="text-muted float-right" href="#!"
+                                >Forgot password?</a
+                              >
+                            </div>
+
+                            <div class="text-center pt-1 mb-2 pb-1">
+                              <button
+                                class="btn btn-primary btn-block fw-bold mb-1"
+                                id="login-btn"
+                                type="button"
+                              >
+                                Log in
+                              </button>
+                            </div>
+                            <h5 class="text-muted text-center">or</h5>
+
+                            <div class="row py-2">
+                              <div class="col-sm-12 mb-2">
+                                <a href="#" class="btn btn-primary w-100">
+                                  <span>Login with Facebook</span>
+                                  <i class="fa fa-facebook"></i>
+                                </a>
+                              </div>
+                              <div class="col-sm-12 mb-3">
+                                <a
+                                  href="#"
+                                  class="btn btn-primary google-plus w-100"
+                                >
+                                  Login with Google
+                                  <i class="fa fa-google-plus"></i>
+                                </a>
+                              </div>
+                            </div>
+
+                            <div
+                              class="d-flex align-items-center justify-content-center pb-4"
+                            >
+                              <p class="mb-0 me-2">Don't have an account?</p>
+                              <button
+                                type="button"
+                                class="btn btn-outline-danger"
+                              >
+                                Create new
+                              </button>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- header-->
+    <header>
+      <div class="container header">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="header-text-parent">
+              <div class="header-text w-75 fw-semibold">
+                <i class="fas fa-clock"></i>
+                <h6 class="">Inspiring articles and some great insights</h6>
+                <h1 class="fw-bold display-5">
+                  Curiosity <br />
+                  in Motion
+                </h1>
+                <p class="">
+                  Exploring the World of Creativity and Innovation. Providing
+                  Inspiration and Resources for Artists, Writers, and
+                  Entrepreneurs Alike.
+                </p>
+
+                <a type="button" class="btn btn-primary dark-purple" href="#recent-blogs">
+                  Start reading
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 header-section">
+            <div class="header-imgs-parent">
+              <img
+                class="headerimage1"
+                src="https://imageio.forbes.com/specials-images/imageserve/6082b65a5f61d7f50b28a721/Getty/960x0.jpg?format=jpg&width=960"
+                alt=""
+              />
+              <img
+                class="headerimage2"
+                src="https://i0.wp.com/www.thedailymba.com/wp-content/uploads/2017/08/post1.png?resize=600%2C400"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="subscribe-section mb-5">
+        <div
+          class="row sub-subscrribe-section g-3 align-items-center justify-content-around"
+        >
+          <div class="col-auto me-3">
+            <h4 class="">Subscribe to our Newsletter</h4>
+            <p class="">
+              Enjoy a Regular Dose of Insightful Content, Thought-Provoking
+              Ideas, and More
+            </p>
+          </div>
+          <div class="col-auto">
+            <div>
+              <form
+                action=""
+                class="d-flex justify-content-center align-items-center"
+              >
+                <label class="form-label me-2">Email</label>
+                <input type="email" class="form-control me-3" />
+                <button class="btn btn-primary dark-purple subscribe-btn text-white">Subscribe</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="div-line"></div>
+    </header>
+    <div class="container">
+      <div class="row justify-content-md-center">
+        <div class="col-lg-9">
+          <div class="container recent-blogs" id="recent-blogs">
+            <div class="container">
+              <!-- Blogs-->
+              <br />
+              <br />
+              <h2 class="text-center dark-blue-text fw-bold display-3">
+                Recent Blogs
+              </h2>
+              <br />
+              <br />
+              <br />
+
+              <div class="row row-cols-1 row-cols-md-2 g-4">
+                <div class="col border-card">
+                  <div class="row no-gutters">
+                    <div class="w-40 cards-img">
+                      <img
+                        src="https://www.publicdomainpictures.net/pictures/40000/nahled/blue-nature-4.jpg"
+                        class="card-img"
+                        alt="..."
+                      />
+                    </div>
+                    <div class="w-60">
+                      <div class="card-body">
+                        <div class="card-content">
+                          <span class="post-category text-white bg-success mb-3"
+                            >Self Development</span
+                          >
+                          <small class="text-muted blog-date"
+                            >July 19, 2019</small
+                          >
+
+                          <h5 class="card-title">Card title</h5>
+                          <div
+                            class="post-meta align-items-center text-left clearfix"
+                          >
+                            <img
+                              src="https://i.pinimg.com/236x/05/d1/94/05d1948a0b051439f26a835c33b79823.jpg"
+                              alt="Image"
+                              class="img-fluid author-img"
+                            />
+                            <span class="d-inline-block mt-1"
+                              >By <a href="#">Khadija Nur</a></span
+                            >
+                          </div>
+
+                          <p class="card-text mb-2">
+                            This is a wider card with supporting text below as a
+                            natural lead-in to additional content. This content
+                            is a little bit longer.
+                          </p>
+                          <span class="read-more"
+                            ><a href="blog.html">Read More</a></span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col border-card">
+                  <div class="row no-gutters">
+                    <div class="w-40 cards-img">
+                      <img
+                        src="https://images.theconversation.com/files/512548/original/file-20230227-2379-ojc054.jpg?ixlib=rb-1.1.0&rect=20%2C148%2C4491%2C2245&q=45&auto=format&w=668&h=324&fit=crop"
+                        class="card-img"
+                        alt="..."
+                      />
+                    </div>
+                    <div class="w-60">
+                      <div class="card-body">
+                        <div class="card-content">
+                          <span class="post-category text-white bg-info mb-3"
+                            >Tech</span
+                          >
+                          <small class="text-muted blog-date"
+                            >July 19, 2019</small
+                          >
+
+                          <h5 class="card-title">Card title</h5>
+                          <div
+                            class="post-meta align-items-center text-left clearfix"
+                          >
+                            <img
+                              src="https://i.pinimg.com/236x/05/d1/94/05d1948a0b051439f26a835c33b79823.jpg"
+                              alt="Image"
+                              class="img-fluid author-img"
+                            />
+                            <span class="d-inline-block mt-1"
+                              >By <a href="#">Khadija Nur</a></span
+                            >
+                          </div>
+
+                          <p class="card-text mb-2">
+                            This is a wider card with supporting text below as a
+                            natural lead-in to additional content. This content
+                            is a little bit longer.
+                          </p>
+                          <span class="read-more"
+                            ><a href="blog.html">Read More</a></span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col border-card">
+                  <div class="row no-gutters">
+                    <div class="w-40 cards-img">
+                      <img
+                        src="https://media.istockphoto.com/id/1356364287/photo/close-up-focus-on-persons-hands-typing-on-the-desktop-computer-backlit-keyboard-screens-show.jpg?s=612x612&w=0&k=20&c=ijjq-DLNxIaPuGvIX8k06IZxMAjGpyJeboaV_byCX9k="
+                        class="card-img"
+                        alt="..."
+                      />
+                    </div>
+                    <div class="w-60">
+                      <div class="card-body">
+                        <div class="card-content">
+                          <span class="post-category text-white bg-danger mb-3"
+                            >IT</span
+                          >
+                          <small class="text-muted blog-date"
+                            >July 19, 2019</small
+                          >
+
+                          <h5 class="card-title">Card title</h5>
+                          <div
+                            class="post-meta align-items-center text-left clearfix"
+                          >
+                            <img
+                              src="https://i.pinimg.com/236x/05/d1/94/05d1948a0b051439f26a835c33b79823.jpg"
+                              alt="Image"
+                              class="img-fluid author-img"
+                            />
+                            <span class="d-inline-block mt-1"
+                              >By <a href="#">Khadija Nur</a></span
+                            >
+                          </div>
+
+                          <p class="card-text mb-2">
+                            This is a wider card with supporting text below as a
+                            natural lead-in to additional content. This content
+                            is a little bit longer.
+                          </p>
+                          <span class="read-more"
+                            ><a href="blog.html">Read More</a></span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col border-card">
+                  <div class="row no-gutters">
+                    <div class="w-40 cards-img">
+                      <img
+                        src="https://signal.avg.com/hubfs/Blog_Content/Avg/Signal/AVG%20Signal%20Images/9%20Ways%20to%20Boost%20Your%20Gaming%20Rig/How_to_Improve_Your_Gaming_PC_Performance-Thumb.jpg"
+                        class="card-img"
+                        alt="..."
+                      />
+                    </div>
+                    <div class="w-60">
+                      <div class="card-body">
+                        <div class="card-content">
+                          <span class="post-category text-white bg-warning mb-3"
+                            >Gaming</span
+                          >
+                          <small class="text-muted blog-date"
+                            >July 19, 2019</small
+                          >
+
+                          <h5 class="card-title">Card title</h5>
+                          <div
+                            class="post-meta align-items-center text-left clearfix"
+                          >
+                            <img
+                              src="https://i.pinimg.com/236x/05/d1/94/05d1948a0b051439f26a835c33b79823.jpg"
+                              alt="Image"
+                              class="img-fluid author-img"
+                            />
+                            <span class="d-inline-block mt-1"
+                              >By <a href="#">Khadija Nur</a></span
+                            >
+                          </div>
+
+                          <p class="card-text mb-2">
+                            This is a wider card with supporting text below as a
+                            natural lead-in to additional content. This content
+                            is a little bit longer.
+                          </p>
+                          <span class="read-more"
+                            ><a href="blog.html">Read More</a></span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col border-card">
+                  <div class="row no-gutters">
+                    <div class="w-40 cards-img">
+                      <img
+                        src="https://static.vecteezy.com/system/resources/thumbnails/004/216/831/original/3d-world-news-background-loop-free-video.jpg"
+                        class="card-img"
+                        alt="..."
+                      />
+                    </div>
+                    <div class="w-60">
+                      <div class="card-body">
+                        <div class="card-content">
+                          <span class="post-category text-white bg-primary mb-3"
+                            >News</span
+                          >
+                          <small class="text-muted blog-date"
+                            >July 19, 2019</small
+                          >
+
+                          <h5 class="card-title">Card title</h5>
+                          <div
+                            class="post-meta align-items-center text-left clearfix"
+                          >
+                            <img
+                              src="https://i.pinimg.com/236x/05/d1/94/05d1948a0b051439f26a835c33b79823.jpg"
+                              alt="Image"
+                              class="img-fluid author-img"
+                            />
+                            <span class="d-inline-block mt-1"
+                              >By <a href="#">Khadija Nur</a></span
+                            >
+                          </div>
+
+                          <p class="card-text mb-2">
+                            This is a wider card with supporting text below as a
+                            natural lead-in to additional content. This content
+                            is a little bit longer.
+                          </p>
+                          <span class="read-more"
+                            ><a href="blog.html">Read More</a></span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col border-card order-md-1">
+                  <div class="row no-gutters">
+                    <div class="w-40 cards-img">
+                      <img
+                        src="data:image/jpeg;base64,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"
+                        class="card-img"
+                        alt="..."
+                      />
+                    </div>
+                    <div class="w-60">
+                      <div class="card-body">
+                        <div class="card-content">
+                          <span class="post-category text-white bg-success mb-3"
+                            >Self Development</span
+                          >
+                          <small class="text-muted blog-date"
+                            >July 19, 2019</small
+                          >
+
+                          <h5 class="card-title">Card title</h5>
+                          <div
+                            class="post-meta align-items-center text-left clearfix"
+                          >
+                            <img
+                              src="https://i.pinimg.com/236x/05/d1/94/05d1948a0b051439f26a835c33b79823.jpg"
+                              alt="Image"
+                              class="img-fluid author-img"
+                            />
+                            <span class="d-inline-block mt-1"
+                              >By <a href="#">Khadija Nur</a></span
+                            >
+                          </div>
+
+                          <p class="card-text mb-2">
+                            This is a wider card with supporting text below as a
+                            natural lead-in to additional content. This content
+                            is a little bit longer.
+                          </p>
+                          <span class="read-more"
+                            ><a href="blog.html">Read More</a></span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--Side cards-->
+
+        <div class="col">
+          <div class="col-side-cards mt-5">
+            <br />
+            <br />
+            <br />
+            <div
+              class="input-group search-side-card mt-4 mb-4 justify-content-center"
+            >
+              <input
+                type="search"
+                class="form-control rounded"
+                placeholder="Search for a blog"
+                aria-label="Search"
+                aria-describedby="search-addon"
+              />
+              <button type="button" class="btn btn-outline-primary">
+                search
+              </button>
+            </div>
+            <div class="card side-cards mt-5">
+              <div class="card-header p-3 light-blue-backgrund">
+                Blogs by category
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                  Self Development
+                  <div class="progress">
+                    <div
+                      class="progress-bar bg-success"
+                      role="progressbar"
+                      style="width: 65%"
+                      aria-valuenow="25"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    ></div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  Tech
+                  <div class="progress">
+                    <div
+                      class="progress-bar bg-info"
+                      role="progressbar"
+                      style="width: 95%"
+                      aria-valuenow="25"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    ></div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  IT
+                  <div class="progress">
+                    <div
+                      class="progress-bar bg-danger"
+                      role="progressbar"
+                      style="width: 80%"
+                      aria-valuenow="25"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    ></div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  Gaming
+                  <div class="progress">
+                    <div
+                      class="progress-bar bg-warning"
+                      role="progressbar"
+                      style="width: 50%"
+                      aria-valuenow="25"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    ></div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  News
+                  <div class="progress">
+                    <div
+                      class="progress-bar bg-primary"
+                      role="progressbar"
+                      style="width: 60%"
+                      aria-valuenow="25"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    ></div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="div-line"></div>
+    </div>
+
+    <section>
+      <div class="container w-75 py-4 featured-blogs">
+        <div class="container py-4">
+          <div class="text-center py-4 mb-4">
+            <h2 class="fw-bold display-5 dark-blue-text">Featured Blogs</h2>
+          </div>
+
+          <div class="p-3 mb-4 super-light-blue-backgrund rounded-3">
+            <div class="container-fluid py-3">
+              <h1 class="display-4 fw-bold dark-blue-text">Blog Title</h1>
+              <p class="col-md-8 fs-4">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Pellentesque sit amet ante enim. Proin vel semper est. Fusce
+                bibendum diam et ante luctus placerat.
+              </p>
+              <button class="btn btn-primary btn-lg" type="button">
+                Read More
+              </button>
+            </div>
+          </div>
+
+          <div class="row align-items-md-stretch">
+            <div class="col-md-6 mb-3">
+              <div class="h-100 p-5 text-white dark-blue-backgrund rounded-3">
+                <h2 class="">Blog Title 2</h2>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
+                  tincidunt elit vitae tempor consectetur. Proin vel semper est.
+                  Fusce bibendum diam et ante luctus placerat. Proin mattisDonec
+                  quis ornare nisi, vitae finibus nibh.
+                </p>
+                <button class="btn btn-outline-light" type="button">
+                  Read More
+                </button>
+              </div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <div
+                class="h-100 p-5 super-light-blue-backgrund border rounded-3"
+              >
+                <h2 class="dark-blue-text">Blog Title 3</h2>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.Nullam
+                  commodo volutpat sollicitudin. , ligula a sodales mattis, nisl
+                  ipsum bibendum tortor, vitae bibendum ligula tellus ac urna.
+                </p>
+                <button class="btn btn-outline-secondary" type="button">
+                  Read More
+                </button>
+              </div>
+            </div>
+          </div>
+          <br />
+          <br />
+          <br />
+          <br />
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center text-lg-start text-muted">
+      <section class="col-10 mx-auto">
+        <div class="text-center text-md-start mt-5">
+          <div class="row ms-0 mt-3 text-white">
+            <div class="col-md-3 col-lg-4 col-xl-3 mb-4">
+              <h6 class="text-uppercase fw-bold mb-4">
+                <i class="fas fa-gem me-3"></i>Wanderlust
+              </h6>
+              <p class="text-start">
+                Exploring the World of Entrepreneurship and Innovation.
+                Providing Resources, Insights, and Inspiration to Help You
+                Start, Grow, and Scale Your Business with Purpose and Impact.
+              </p>
+            </div>
+
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+              <h6 class="text-uppercase fw-bold mb-4">Useful links</h6>
+              <p>
+                <a href="topics.html" class="text-reset">Topics</a>
+              </p>
+              <p>
+                <a href="writers.html" class="text-reset">Writers</a>
+              </p>
+
+              <p>
+       <a href="contact.html" class="text-reset">Contact us</a>              </p>
+            </div>
+
+            <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mb-md-0 mb-3">
+              <h6 class="text-uppercase fw-bold mb-4">
+                <a href="contact.html" class="text-white"> Contact</a>
+              </h6>
+              <p>Ankara saray mah/Pursaklar - Turkey</p>
+              <p>itskhadijanur@gmail.com</p>
+              <p>+ 90 555 102 61 00</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="col-10 mx-auto pt-4">
+        <div class="row row-md-cols-4 mb-4 text-center text-white">
+          <div class="col">
+            <a
+              class="btn btn-link btn-floating btn-lg text-white m-1"
+              href="#!"
+              role="button"
+              data-mdb-ripple-color="dark"
+              >Twitter
+            </a>
+          </div>
+
+          <div class="col">
+            <a
+              class="btn btn-link btn-floating btn-lg text-white m-1"
+              href="#!"
+              role="button"
+              data-mdb-ripple-color="dark"
+              >instagram
+            </a>
+          </div>
+          <div class="col">
+            <a
+              class="btn btn-link btn-floating btn-lg text-white m-1"
+              href="#!"
+              role="button"
+              data-mdb-ripple-color="dark"
+              >Linkedin</a
+            >
+          </div>
+          <div class="col">
+            <a
+              class="btn btn-link btn-floating btn-lg text-white m-1"
+              href="#!"
+              role="button"
+              data-mdb-ripple-color="dark"
+            >
+              Github</a
+            >
+          </div>
+        </div>
+        <div class="text-center text-white p-4">
+          © 2024 Copyright:
+          <a class="text-reset fw-bold" href="">Wanderlust</a>
+        </div>
+      </section>
+    </footer>
+
+    <!-- bootstrap -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+      integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+      integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
+      crossorigin="anonymous"
+    ></script>
+    <!--Font awesome-->
+    <script
+      src="https://kit.fontawesome.com/cee305bb4c.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
